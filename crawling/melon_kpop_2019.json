@@ -1,0 +1,402 @@
+[
+    {
+        "rank": "1",
+        "title": "사랑에 연습이 있었다면 (Prod. 2soo)",
+        "artist": "임재현",
+        "album": "사랑에 연습이 있었다면 (Prod. 2soo)",
+        "song_id": "31324607",
+        "album_id": "10207131"
+    },
+    {
+        "rank": "2",
+        "title": "그때가 좋았어",
+        "artist": "케이시 (Kassy)",
+        "album": "그때가 좋았어",
+        "song_id": "31524320",
+        "album_id": "10237420"
+    },
+    {
+        "rank": "3",
+        "title": "작은 것들을 위한 시 (Boy With Luv) (Feat. Halsey)",
+        "artist": "방탄소년단",
+        "album": "작은 것들을 위한 시 (Boy With Luv) (Feat. Halsey)",
+        "song_id": "31737197",
+        "album_id": "10273641"
+    },
+    {
+        "rank": "4",
+        "title": "넘쳐흘러",
+        "artist": "엠씨더맥스 (M.C the MAX)",
+        "album": "넘쳐흘러",
+        "song_id": "31532643",
+        "album_id": "10238710"
+    },
+    {
+        "rank": "5",
+        "title": "모든 날, 모든 순간 (Every day, Every Moment)",
+        "artist": "폴킴",
+        "album": "모든 날, 모든 순간 (Every day, Every Moment)",
+        "song_id": "30962526",
+        "album_id": "10149492"
+    },
+    {
+        "rank": "6",
+        "title": "너를 만나",
+        "artist": "폴킴",
+        "album": "너를 만나",
+        "song_id": "31388145",
+        "album_id": "10217134"
+    },
+    {
+        "rank": "7",
+        "title": "사계 (Four Seasons)",
+        "artist": "태연 (TAEYEON)",
+        "album": "사계 (Four Seasons)",
+        "song_id": "31688205",
+        "album_id": "10265079"
+    },
+    {
+        "rank": "8",
+        "title": "주저하는 연인들을 위해",
+        "artist": "잔나비",
+        "album": "주저하는 연인들을 위해",
+        "song_id": "31666417",
+        "album_id": "10260858"
+    },
+    {
+        "rank": "9",
+        "title": "니 소식",
+        "artist": "송하예",
+        "album": "니 소식",
+        "song_id": "31788850",
+        "album_id": "10283614"
+    },
+    {
+        "rank": "10",
+        "title": "오늘도 빛나는 너에게 (To You My Light) (Feat.이라온)",
+        "artist": "마크툽 (MAKTUB)",
+        "album": "오늘도 빛나는 너에게 (To You My Light) (Feat.이라온)",
+        "song_id": "31853557",
+        "album_id": "10294603"
+    },
+    {
+        "rank": "11",
+        "title": "벌써 12시",
+        "artist": "청하",
+        "album": "벌써 12시",
+        "song_id": "31532438",
+        "album_id": "10238683"
+    },
+    {
+        "rank": "12",
+        "title": "술이 문제야",
+        "artist": "장혜진",
+        "album": "술이 문제야",
+        "song_id": "31870517",
+        "album_id": "10297571"
+    },
+    {
+        "rank": "13",
+        "title": "옥탑방 (Rooftop)",
+        "artist": "엔플라잉 (N.Flying)",
+        "album": "옥탑방 (Rooftop)",
+        "song_id": "31532656",
+        "album_id": "10238711"
+    },
+    {
+        "rank": "14",
+        "title": "달라달라",
+        "artist": "ITZY (있지)",
+        "album": "달라달라",
+        "song_id": "31606729",
+        "album_id": "10250473"
+    },
+    {
+        "rank": "15",
+        "title": "노래방에서",
+        "artist": "장범준",
+        "album": "노래방에서",
+        "song_id": "31684636",
+        "album_id": "10264375"
+    },
+    {
+        "rank": "16",
+        "title": "이 노래가 클럽에서 나온다면",
+        "artist": "우디 (Woody)",
+        "album": "이 노래가 클럽에서 나온다면",
+        "song_id": "31576009",
+        "album_id": "10245121"
+    },
+    {
+        "rank": "17",
+        "title": "포장마차",
+        "artist": "황인욱",
+        "album": "포장마차",
+        "song_id": "31873020",
+        "album_id": "10298014"
+    },
+    {
+        "rank": "18",
+        "title": "나만, 봄",
+        "artist": "볼빨간사춘기",
+        "album": "나만, 봄",
+        "song_id": "31709523",
+        "album_id": "10268898"
+    },
+    {
+        "rank": "19",
+        "title": "사계 (하루살이)",
+        "artist": "엠씨더맥스 (M.C the MAX)",
+        "album": "사계 (하루살이)",
+        "song_id": "31532642",
+        "album_id": "10238710"
+    },
+    {
+        "rank": "20",
+        "title": "안녕",
+        "artist": "폴킴",
+        "album": "안녕",
+        "song_id": "31984204",
+        "album_id": "10317137"
+    },
+    {
+        "rank": "21",
+        "title": "180도",
+        "artist": "벤",
+        "album": "180도",
+        "song_id": "31477685",
+        "album_id": "10230497"
+    },
+    {
+        "rank": "22",
+        "title": "너에게 못했던 내 마지막 말은",
+        "artist": "다비치",
+        "album": "너에게 못했던 내 마지막 말은",
+        "song_id": "31804010",
+        "album_id": "10286309"
+    },
+    {
+        "rank": "23",
+        "title": "신용재",
+        "artist": "하은 (포맨)",
+        "album": "신용재",
+        "song_id": "31406357",
+        "album_id": "10219644"
+    },
+    {
+        "rank": "24",
+        "title": "흔들리는 꽃들 속에서 네 샴푸향이 느껴진거야",
+        "artist": "장범준",
+        "album": "흔들리는 꽃들 속에서 네 샴푸향이 느껴진거야",
+        "song_id": "32003395",
+        "album_id": "10320500"
+    },
+    {
+        "rank": "25",
+        "title": "어떻게 이별까지 사랑하겠어, 널 사랑하는 거지",
+        "artist": "AKMU (악뮤)",
+        "album": "어떻게 이별까지 사랑하겠어, 널 사랑하는 거지",
+        "song_id": "32061975",
+        "album_id": "10331947"
+    },
+    {
+        "rank": "26",
+        "title": "솔직하게 말해서 나",
+        "artist": "김나영",
+        "album": "솔직하게 말해서 나",
+        "song_id": "31854442",
+        "album_id": "10294763"
+    },
+    {
+        "rank": "27",
+        "title": "사월이 지나면 우리 헤어져요 (Beautiful goodbye)",
+        "artist": "첸 (CHEN)",
+        "album": "사월이 지나면 우리 헤어져요 (Beautiful goodbye)",
+        "song_id": "31706215",
+        "album_id": "10268441"
+    },
+    {
+        "rank": "28",
+        "title": "FANCY",
+        "artist": "TWICE (트와이스)",
+        "album": "FANCY",
+        "song_id": "31754579",
+        "album_id": "10276861"
+    },
+    {
+        "rank": "29",
+        "title": "헤어져줘서 고마워",
+        "artist": "벤",
+        "album": "헤어져줘서 고마워",
+        "song_id": "31901475",
+        "album_id": "10302879"
+    },
+    {
+        "rank": "30",
+        "title": "사랑이 식었다고 말해도 돼",
+        "artist": "먼데이 키즈",
+        "album": "사랑이 식었다고 말해도 돼",
+        "song_id": "31829536",
+        "album_id": "10290621"
+    },
+    {
+        "rank": "31",
+        "title": "시든 꽃에 물을 주듯",
+        "artist": "HYNN (박혜원)",
+        "album": "시든 꽃에 물을 주듯",
+        "song_id": "31703498",
+        "album_id": "10267986"
+    },
+    {
+        "rank": "32",
+        "title": "초록빛",
+        "artist": "폴킴",
+        "album": "초록빛",
+        "song_id": "31565593",
+        "album_id": "10243480"
+    },
+    {
+        "rank": "33",
+        "title": "기억해줘요 내 모든 날과 그때를",
+        "artist": "거미 (GUMMY)",
+        "album": "기억해줘요 내 모든 날과 그때를",
+        "song_id": "31967064",
+        "album_id": "10314289"
+    },
+    {
+        "rank": "34",
+        "title": "그대라는 시",
+        "artist": "태연 (TAEYEON)",
+        "album": "그대라는 시",
+        "song_id": "31938460",
+        "album_id": "10309213"
+    },
+    {
+        "rank": "35",
+        "title": "Way Back Home",
+        "artist": "숀 (SHAUN)",
+        "album": "Way Back Home",
+        "song_id": "31151836",
+        "album_id": "10179508"
+    },
+    {
+        "rank": "36",
+        "title": "봄날",
+        "artist": "방탄소년단",
+        "album": "봄날",
+        "song_id": "30244931",
+        "album_id": "10037969"
+    },
+    {
+        "rank": "37",
+        "title": "IDOL",
+        "artist": "방탄소년단",
+        "album": "IDOL",
+        "song_id": "31266290",
+        "album_id": "10197480"
+    },
+    {
+        "rank": "38",
+        "title": "멍청이(twit)",
+        "artist": "화사 (HWASA)",
+        "album": "멍청이(twit)",
+        "song_id": "31608765",
+        "album_id": "10250874"
+    },
+    {
+        "rank": "39",
+        "title": "신청곡 (Feat. SUGA of BTS)",
+        "artist": "이소라",
+        "album": "신청곡 (Feat. SUGA of BTS)",
+        "song_id": "31571110",
+        "album_id": "10244499"
+    },
+    {
+        "rank": "40",
+        "title": "띵 (Prod. By 기리보이)",
+        "artist": "Jvcki Wai",
+        "album": "띵 (Prod. By 기리보이)",
+        "song_id": "31554317",
+        "album_id": "10241866"
+    },
+    {
+        "rank": "41",
+        "title": "너도 그냥 날 놓아주면 돼",
+        "artist": "윤건",
+        "album": "너도 그냥 날 놓아주면 돼",
+        "song_id": "31455159",
+        "album_id": "10227145"
+    },
+    {
+        "rank": "42",
+        "title": "당신과는 천천히",
+        "artist": "장범준",
+        "album": "당신과는 천천히",
+        "song_id": "31684634",
+        "album_id": "10264375"
+    },
+    {
+        "rank": "43",
+        "title": "Kill This Love",
+        "artist": "BLACKPINK",
+        "album": "Kill This Love",
+        "song_id": "31717822",
+        "album_id": "10270288"
+    },
+    {
+        "rank": "44",
+        "title": "이별하러 가는 길",
+        "artist": "임한별",
+        "album": "이별하러 가는 길",
+        "song_id": "31304766",
+        "album_id": "10203965"
+    },
+    {
+        "rank": "45",
+        "title": "SOLO",
+        "artist": "제니 (JENNIE)",
+        "album": "SOLO",
+        "song_id": "31417871",
+        "album_id": "10221424"
+    },
+    {
+        "rank": "46",
+        "title": "비",
+        "artist": "폴킴",
+        "album": "비",
+        "song_id": "8235260",
+        "album_id": "2692501"
+    },
+    {
+        "rank": "47",
+        "title": "내 생에 아름다운",
+        "artist": "케이윌",
+        "album": "내 생에 아름다운",
+        "song_id": "31373277",
+        "album_id": "10214874"
+    },
+    {
+        "rank": "48",
+        "title": "YES or YES",
+        "artist": "TWICE (트와이스)",
+        "album": "YES or YES",
+        "song_id": "31403163",
+        "album_id": "10219298"
+    },
+    {
+        "rank": "49",
+        "title": "Love Shot",
+        "artist": "EXO",
+        "album": "Love Shot",
+        "song_id": "31492319",
+        "album_id": "10232781"
+    },
+    {
+        "rank": "50",
+        "title": "Goodbye",
+        "artist": "박효신",
+        "album": "Goodbye",
+        "song_id": "31777113",
+        "album_id": "10281385"
+    }
+]

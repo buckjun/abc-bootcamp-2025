@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>자기소개</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-sky-200">
+  <div class="w-full max-w-md mx-auto p-6 rounded-xl shadow-lg bg-white">
+    <div id="profile-card" class="flex flex-col items-center cursor-pointer select-none transition-all duration-300 relative">
+      <!-- 프로필 이미지 -->
+      <img
+        id="profile-img"
+        src="카톡 기본프로필 사진.jpg"
+        alt="프로필 이미지"
+        class="w-28 h-28 rounded-full border-4 border-sky-400 mb-4 shadow"
+      />
+
+      <h2 id="profile-name" class="text-2xl font-bold text-sky-700 mb-1">홍길동</h2>
+      <p id="profile-intro" class="text-sky-600 mb-2">긍정적인 개발자, 소통을 좋아합니다.</p>
+
+      <!-- 상세 정보 (초기에는 숨김) -->
+      <div id="profile-details" class="w-full mt-4 text-center space-y-2 hidden">
+        <div>
+          <span class="font-semibold">생년월일:</span>
+          <span id="profile-birth">1995-05-10</span>
+        </div>
+        <div>
+          <span class="font-semibold">학교:</span>
+          <span id="profile-school">한국대학교</span>
+        </div>
+        <div>
+          <span class="font-semibold">전공:</span>
+          <span id="profile-major">컴퓨터공학</span>
+        </div>
+        <div>
+          <span class="font-semibold">취미:</span>
+          <span id="profile-hobby">독서, 등산, 음악감상</span>
+        </div>
+      </div>
+
+      <!-- 수정 버튼 (상세 정보가 보일 때만 표시) -->
+      <button
+        id="edit-btn"
+        type="button"
+        class="hidden absolute top-4 right-4 text-xs bg-sky-200 hover:bg-sky-400 text-sky-800 px-2 py-1 rounded transition"
+      >
+        수정하기
+      </button>
+
+      <div id="profile-hint" class="text-gray-500 text-sm mt-2">프로필을 클릭하면 자세한 정보를 볼 수 있습니다.</div>
+    </div>
+
+    <!-- 업데이트 폼 (수정하기 눌렀을 때만 표시) -->
+    <form id="update-form" class="mt-8 space-y-4 hidden" autocomplete="off">
+      <h3 class="text-lg font-semibold text-sky-700">정보 업데이트</h3>
+
+      <input
+        id="form-name"
+        type="text"
+        name="name"
+        placeholder="이름"
+        class="w-full border rounded px-3 py-2"
+        required
+      />
+      <input
+        id="form-intro"
+        type="text"
+        name="intro"
+        placeholder="한 줄 소개"
+        class="w-full border rounded px-3 py-2"
+      />
+      <input
+        id="form-birth"
+        type="date"
+        name="birth"
+        placeholder="생년월일"
+        class="w-full border rounded px-3 py-2"
+        required
+      />
+      <input
+        id="form-school"
+        type="text"
+        name="school"
+        placeholder="학교"
+        class="w-full border rounded px-3 py-2"
+        required
+      />
+      <input
+        id="form-major"
+        type="text"
+        name="major"
+        placeholder="전공"
+        class="w-full border rounded px-3 py-2"
+      />
+      <input
+        id="form-hobby"
+        type="text"
+        name="hobby"
+        placeholder="취미"
+        class="w-full border rounded px-3 py-2"
+      />
+      <button
+        type="submit"
+        class="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 rounded"
+      >
+        저장하기
+      </button>
+    </form>
+  </div>
+
+  <script>
+    const profileCard = document.getElementById("profile-card");
+    const profileDetails = document.getElementById("profile-details");
+    const profileHint = document.getElementById("profile-hint");
+    const editBtn = document.getElementById("edit-btn");
+    const updateForm = document.getElementById("update-form");
+
+    // 프로필 기본 요소
+    const profileName = document.getElementById("profile-name");
+    const profileIntro = document.getElementById("profile-intro");
+    const profileBirth = document.getElementById("profile-birth");
+    const profileSchool = document.getElementById("profile-school");
+    const profileMajor = document.getElementById("profile-major");
+    const profileHobby = document.getElementById("profile-hobby");
+
+    // 폼 입력 요소
+    const formName = document.getElementById("form-name");
+    const formIntro = document.getElementById("form-intro");
+    const formBirth = document.getElementById("form-birth");
+    const formSchool = document.getElementById("form-school");
+    const formMajor = document.getElementById("form-major");
+    const formHobby = document.getElementById("form-hobby");
+
+    let detailsVisible = false;
+    let editMode = false;
+
+    // 프로필 카드 클릭: 상세 정보 토글 (수정모드 아닐 때만)
+    profileCard.addEventListener("click", () => {
+      if (editMode) return;
+      detailsVisible = !detailsVisible;
+      profileDetails.classList.toggle("hidden", !detailsVisible);
+      profileHint.classList.toggle("hidden", detailsVisible);
+      editBtn.classList.toggle("hidden", !detailsVisible);
+      // 폼 숨기기 (만약 열려있으면)
+      if (updateForm.classList.contains("hidden") === false) {
+        updateForm.classList.add("hidden");
+        editMode = false;
+      }
+    });
+
+    // 수정 버튼 클릭 시: 폼에 현재 정보 채우고 폼 표시, 상세 정보 및 힌트 숨김
+    editBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      editMode = true;
+      formName.value = profileName.textContent;
+      formIntro.value = profileIntro.textContent;
+      formBirth.value = profileBirth.textContent;
+      formSchool.value = profileSchool.textContent;
+      formMajor.value = profileMajor.textContent;
+      formHobby.value = profileHobby.textContent;
+      updateForm.classList.remove("hidden");
+      profileDetails.classList.add("hidden");
+      profileHint.classList.add("hidden");
+      editBtn.classList.add("hidden");
+    });
+
+    // 폼 제출: 데이터 저장 후 UI 업데이트 및 폼 닫기
+    updateForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = formName.value.trim();
+      const intro = formIntro.value.trim();
+      const birth = formBirth.value;
+      const school = formSchool.value.trim();
+      const major = formMajor.value.trim();
+      const hobby = formHobby.value.trim();
+
+      // 로컬스토리지 저장
+      localStorage.setItem("profileName", name);
+      localStorage.setItem("profileIntro", intro);
+      localStorage.setItem("profileBirth", birth);
+      localStorage.setItem("profileSchool", school);
+      localStorage.setItem("profileMajor", major);
+      localStorage.setItem("profileHobby", hobby);
+
+      // UI 업데이트
+      profileName.textContent = name;
+      profileIntro.textContent = intro;
+      profileBirth.textContent = birth;
+      profileSchool.textContent = school;
+      profileMajor.textContent = major;
+      profileHobby.textContent = hobby;
+
+      // 폼 닫고 상세 정보와 수정버튼 표시
+      updateForm.classList.add("hidden");
+      profileDetails.classList.remove("hidden");
+      profileHint.classList.add("hidden");
+      editBtn.classList.remove("hidden");
+      editMode = false;
+      detailsVisible = true;
+
+      alert("정보가 저장되었습니다.");
+    });
+
+    // 페이지 로드 시 저장된 정보 불러오기 및 초기 상태 세팅
+    window.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("profileName")) {
+        profileName.textContent = localStorage.getItem("profileName");
+      }
+      if (localStorage.getItem("profileIntro")) {
+        profileIntro.textContent = localStorage.getItem("profileIntro");
+      }
+      if (localStorage.getItem("profileBirth")) {
+        profileBirth.textContent = localStorage.getItem("profileBirth");
+      }
+      if (localStorage.getItem("profileSchool")) {
+        profileSchool.textContent = localStorage.getItem("profileSchool");
+      }
+      if (localStorage.getItem("profileMajor")) {
+        profileMajor.textContent = localStorage.getItem("profileMajor");
+      }
+      if (localStorage.getItem("profileHobby")) {
+        profileHobby.textContent = localStorage.getItem("profileHobby");
+      }
+      // 초기 상태는 상세 정보 숨기고 이름/사진/한줄소개만 보이게
+      profileDetails.classList.add("hidden");
+      editBtn.classList.add("hidden");
+      profileHint.classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>

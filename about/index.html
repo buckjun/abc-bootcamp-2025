@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자기소개</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-sky-200">
+  <div class="w-full max-w-md mx-auto p-6 rounded-xl shadow-lg bg-white">
+    <!-- 프로필 카드 -->
+    <div id="profile-card" class="flex flex-col items-center cursor-pointer select-none transition-all duration-300">
+      <img id="profile-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="프로필 이미지" class="w-28 h-28 rounded-full border-4 border-sky-400 mb-4 shadow">
+      <div class="flex items-center gap-2">
+        <h2 id="profile-name" class="text-2xl font-bold text-sky-700 mb-2">홍길동</h2>
+        <button id="edit-btn" class="hidden text-xs bg-sky-200 hover:bg-sky-400 text-sky-800 px-2 py-1 rounded transition" type="button">수정하기</button>
+      </div>
+      <!-- 상세 정보 (초기에는 숨김) -->
+      <div id="profile-details" class="w-full mt-4 text-center space-y-2 hidden">
+        <div><span class="font-semibold">생년월일:</span> <span id="profile-birth">1995-05-10</span></div>
+        <div><span class="font-semibold">학교:</span> <span id="profile-school">한국대학교</span></div>
+        <div><span class="font-semibold">취미:</span> <span id="profile-hobby">독서, 등산, 음악감상</span></div>
+      </div>
+      <div id="profile-hint" class="text-gray-500 text-sm mt-2">프로필을 클릭하면 자세한 정보를 볼 수 있습니다.</div>
+    </div>
+
+    <!-- 업데이트 폼 (상세 정보가 보일 때만 표시) -->
+    <form id="update-form" class="mt-8 space-y-4 hidden">
+      <h3 class="text-lg font-semibold text-sky-700">정보 업데이트</h3>
+      <input id="form-name" type="text" name="name" placeholder="이름" class="w-full border rounded px-3 py-2" required>
+      <input id="form-birth" type="date" name="birth" placeholder="생년월일" class="w-full border rounded px-3 py-2" required>
+      <input id="form-school" type="text" name="school" placeholder="학교" class="w-full border rounded px-3 py-2" required>
+      <input id="form-hobby" type="text" name="hobby" placeholder="취미" class="w-full border rounded px-3 py-2">
+      <button type="submit" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 rounded">업데이트</button>
+    </form>
+  </div>
+
+  <script>
+    // 프로필 클릭 시 상세 정보 토글
+    const profileCard = document.getElementById('profile-card');
+    const profileDetails = document.getElementById('profile-details');
+    const profileHint = document.getElementById('profile-hint');
+    const updateForm = document.getElementById('update-form');
+    const editBtn = document.getElementById('edit-btn');
+    // 프로필 정보 요소
+    const profileName = document.getElementById('profile-name');
+    const profileBirth = document.getElementById('profile-birth');
+    const profileSchool = document.getElementById('profile-school');
+    const profileHobby = document.getElementById('profile-hobby');
+    // 폼 입력 요소
+    const formName = document.getElementById('form-name');
+    const formBirth = document.getElementById('form-birth');
+    const formSchool = document.getElementById('form-school');
+    const formHobby = document.getElementById('form-hobby');
+
+    let detailsVisible = false;
+    let editMode = false;
+
+    // 프로필 클릭 시 상세 정보 토글 (업데이트 폼은 최초 1회만 표시)
+    profileCard.addEventListener('click', () => {
+      if (editMode) return; // 수정모드일 때는 클릭 무시
+      detailsVisible = !detailsVisible;
+      profileDetails.classList.toggle('hidden', !detailsVisible);
+      // 폼은 최초 1회만 표시, 이후에는 수정버튼으로만 진입
+      if (!localStorage.getItem('profileUpdated')) {
+        updateForm.classList.toggle('hidden', !detailsVisible);
+      }
+      profileHint.classList.toggle('hidden', detailsVisible);
+    });
+
+    // 폼 제출 시 실제 정보 저장 및 UI 업데이트
+    updateForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // 값 저장
+      const name = formName.value.trim();
+      const birth = formBirth.value;
+      const school = formSchool.value.trim();
+      const hobby = formHobby.value.trim();
+      // 실제 저장 (localStorage)
+      localStorage.setItem('profileName', name);
+      localStorage.setItem('profileBirth', birth);
+      localStorage.setItem('profileSchool', school);
+      localStorage.setItem('profileHobby', hobby);
+      localStorage.setItem('profileUpdated', '1');
+      // UI 반영
+      profileName.textContent = name;
+      profileBirth.textContent = birth;
+      profileSchool.textContent = school;
+      profileHobby.textContent = hobby;
+      // 폼 숨기고 수정버튼 보이기
+      updateForm.classList.add('hidden');
+      editBtn.classList.remove('hidden');
+      editMode = false;
+      alert('정보가 업데이트되었습니다!');
+    });
+
+    // 수정하기 버튼 클릭 시 폼 다시 표시
+    editBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      // 폼에 현재 정보 입력
+      formName.value = profileName.textContent;
+      formBirth.value = profileBirth.textContent;
+      formSchool.value = profileSchool.textContent;
+      formHobby.value = profileHobby.textContent;
+      updateForm.classList.remove('hidden');
+      editMode = true;
+    });
+
+    // 페이지 로드 시 localStorage에서 정보 불러오기
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('profileUpdated')) {
+        profileName.textContent = localStorage.getItem('profileName') || '홍길동';
+        profileBirth.textContent = localStorage.getItem('profileBirth') || '1995-05-10';
+        profileSchool.textContent = localStorage.getItem('profileSchool') || '한국대학교';
+        profileHobby.textContent = localStorage.getItem('profileHobby') || '독서, 등산, 음악감상';
+        editBtn.classList.remove('hidden');
+        updateForm.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
