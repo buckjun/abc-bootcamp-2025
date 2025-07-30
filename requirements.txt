@@ -7,3 +7,5 @@ pygame
 
 requests
 httpx
+
+beautifulsoup4
